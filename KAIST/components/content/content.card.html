@@ -1,0 +1,42 @@
+<!-- @dsCard group="Components" viewport="640x400" name="Cards & frames" subtitle="Transparent corner-marked cards, elevation steps, and the duotone figure" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>.demo{max-width:620px;margin:0 auto;padding:var(--space-6) var(--space-4) var(--space-8)}.demo-head{font-family:var(--font-body);font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.55;margin:var(--space-6) 0 var(--space-3)}.demo-head:first-child{margin-top:0}.row{display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap}.stack{display:grid;gap:var(--space-3)}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3)}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const DS=window.KAISTDesignSystem_045fa4;
+const S=(p)=>({width:p,height:p,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:1.5,strokeLinecap:"round",strokeLinejoin:"round"});
+const Arrow=({s=14})=><svg {...S(s)}><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>;
+const Layers=({s=16})=><svg {...S(s)}><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>;
+const Sparkle=({s=16})=><svg {...S(s)}><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>;
+const Circle=({s=13})=><svg {...S(s)}><circle cx="12" cy="12" r="10"/></svg>;
+const {Card,Duotone}=DS;
+function Demo(){return(<main className="demo">
+<div className="demo-head">Cards</div>
+<div className="grid-3">
+<Card kicker="Getting started" title="Pick a direction" meta="Updated today" metaIcon={<Layers s={13}/>}>Three variants of the current theme, one axis at a time.</Card>
+<Card kicker="Typography" title="Tune the pair" meta="Updated today" metaIcon={<Layers s={13}/>}>Swap either family and the whole scale re-renders with it.</Card>
+<Card kicker="Export" title="Ship the tokens" meta="Updated today" metaIcon={<Layers s={13}/>}>Emit the variables and the guide into the project.</Card>
+</div>
+<div className="demo-head">Elevation</div>
+<div className="grid-3">
+<Card kicker="sm" elevation="sm">Quiet lift — list rows, inputs.</Card>
+<Card kicker="md" elevation="md">Cards and popovers sit here.</Card>
+<Card kicker="lg" elevation="lg">Dialogs float above everything.</Card>
+</div>
+<div className="demo-head">Duotone figure</div>
+<Duotone src="../../assets/photo.jpg" alt="The reference photograph" caption="Duotone — photographs are washed in KAIST Blue, like a screen print." imgStyle={{height:180,objectFit:'cover'}}/>
+</main>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body>
+</html>

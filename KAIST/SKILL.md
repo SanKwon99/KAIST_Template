@@ -1,6 +1,6 @@
 ---
 name: kaist-design
-description: Use this skill to generate well-branded interfaces and assets for KAIST (DAIM Labs), either for production or throwaway prototypes/mocks/etc. Contains essential design guidelines, colors, type, fonts, assets, and the KAIST Deck template for prototyping.
+description: Use this skill to generate well-branded interfaces and assets for KAIST (DAIM Labs), either for production or throwaway prototypes/mocks/etc. Contains essential design guidelines, colors, type, fonts, assets, React components and the KAIST Deck template for prototyping.
 user-invocable: true
 ---
 
