@@ -1,0 +1,32 @@
+/* KAIST — color tokens. Industry's blueprint system retuned to the KAIST logo.
+   Accent = KAIST Blue #004191 (step 800 on the shared OKLCH lightness scale); Accent 2 = KAIST Light Blue #1487C8 (step 600), the logo's swoosh.
+   Ink and neutrals lean to KAIST Blue's hue (258°); the ground stays Industry's technical light grey. */
+:root {
+  --color-bg: #f2f2f3;
+  --color-surface: #e4eaf3;
+  --color-text: #101e33;
+  --color-accent: #004191;
+  --color-accent-2: #1487c8;
+  --color-divider: color-mix(in srgb, #004191 20%, transparent);
+
+  --color-neutral-100: #f0f6ff; --color-neutral-200: #e2e8f1; --color-neutral-300: #cfd5de;
+  --color-neutral-400: #b2b8c1; --color-neutral-500: #9399a1; --color-neutral-600: #757b83;
+  --color-neutral-700: #595e66; --color-neutral-800: #3e434a; --color-neutral-900: #272c32;
+
+  --color-accent-100: #f0f6fe; --color-accent-200: #dbe9ff; --color-accent-300: #bbd7ff;
+  --color-accent-400: #8bb9fe; --color-accent-500: #5d99f0; --color-accent-600: #3f79ce;
+  --color-accent-700: #215bae; --color-accent-800: #004191; --color-accent-900: #00285f;
+
+  --color-accent-2-100: #edf6fe; --color-accent-2-200: #d4ecff; --color-accent-2-300: #acdbff;
+  --color-accent-2-400: #77c0f5; --color-accent-2-500: #3ba1e4; --color-accent-2-600: #1487c8;
+  --color-accent-2-700: #006498; --color-accent-2-800: #00476e; --color-accent-2-900: #012f4a;
+
+  /* semantic aliases */
+  --kaist-blue: var(--color-accent);
+  --kaist-light-blue: var(--color-accent-2);
+  --text-body: var(--color-text);
+  --text-muted: color-mix(in srgb, var(--color-text) 55%, transparent);
+  --text-accent-body: var(--color-accent-700);
+  --surface-section: var(--color-accent);
+  --rule-strong: var(--color-accent);
+}

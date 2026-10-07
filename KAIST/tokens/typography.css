@@ -1,0 +1,6 @@
+/* KAIST — type tokens */
+:root {
+  --font-heading: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  --font-heading-weight: 600;
+  --font-body: "Barlow", Arial, system-ui, sans-serif;
+}
